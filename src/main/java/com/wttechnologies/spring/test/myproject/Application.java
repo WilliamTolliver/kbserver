@@ -7,8 +7,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
+@ComponentScan("com.wttechnologies.spring.test")
+@EnableJpaRepositories
 public class Application {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
@@ -24,13 +29,6 @@ public class Application {
 			repository.save(new User("Jack", "Bauer", "", "", ""));
 			repository.save(new User("Chloe", "O'Brian", "", "", ""));
 			repository.save(new User("Kim", "Bauer", "", "", ""));
-
-			// fetch all customers
-			log.info("Customers found with findAll():");
-			log.info("-------------------------------");
-			for (User customer : repository.findAll()) {
-				log.info(customer.toString());
-			}
 
 		};
 	}
