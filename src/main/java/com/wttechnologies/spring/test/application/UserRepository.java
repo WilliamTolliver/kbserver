@@ -1,4 +1,4 @@
-package com.wttechnologies.spring.test.myproject;
+package com.wttechnologies.spring.test.application;
 
 
 import java.util.List;
