@@ -2,6 +2,7 @@ package com.wttechnologies.spring.test.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +40,10 @@ public class userService {
 		return repository.findAll();
 	}
     @RequestMapping(value="/create", method=RequestMethod.POST)
-    public String greetingSubmit(@ModelAttribute Model model, User user) {
-        model.addAttribute("user", user);
+    public void greetingSubmit( User user, HttpServletRequest request) {
         
         System.out.println(user);
-        return "main";
+        repository.save(user);
+
     }
 }

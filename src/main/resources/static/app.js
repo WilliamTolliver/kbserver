@@ -10,6 +10,9 @@ myApp.config(function($routeProvider) {
 	}).when('/signup', {
 		templateUrl : 'pages/second.html',
 		controller : 'mainController'
+	}).when('/create', {
+		templateUrl : 'pages/main.html',
+		controller : 'mainController'
 	})
 
 });
