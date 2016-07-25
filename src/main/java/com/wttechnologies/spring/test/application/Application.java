@@ -1,4 +1,4 @@
-package com.wttechnologies.spring.test.myproject;
+package com.wttechnologies.spring.test.application;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,5 @@ public class Application {
 
 		};
 	}
-
-
 
 }

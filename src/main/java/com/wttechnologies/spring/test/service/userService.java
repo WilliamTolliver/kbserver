@@ -2,15 +2,17 @@ package com.wttechnologies.spring.test.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.wttechnologies.spring.test.myproject.Application;
-import com.wttechnologies.spring.test.myproject.User;
-import com.wttechnologies.spring.test.myproject.UserRepository;
+import com.wttechnologies.spring.test.application.Application;
+import com.wttechnologies.spring.test.application.User;
+import com.wttechnologies.spring.test.application.UserRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,4 +39,11 @@ public class userService {
 
 		return repository.findAll();
 	}
+    @RequestMapping(value="/create", method=RequestMethod.POST)
+    public void greetingSubmit( User user, HttpServletRequest request) {
+        
+        System.out.println(user);
+        repository.save(user);
+
+    }
 }
