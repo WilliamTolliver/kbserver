@@ -1,8 +1,8 @@
 
-<di class="container" id="wrap" ng-controller="mainController">
+<div class="container" id="wrap" ng-controller="createController">
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<form action="/create" method="post" accept-charset="utf-8"
+		<form  accept-charset="utf-8"
 			class="form" role="form" novalidate class="simple-form">
 			<legend>Sign Up</legend>
 			<h4>It's free and always will be.</h4>
@@ -22,9 +22,9 @@
 				class="form-control input-lg" placeholder="Your Email"
 				ng-model="user.email" /> <input type="text" name="username" value=""
 				class="form-control input-lg" placeholder="Your Username"
-				ng-model="username" /><input type="password" name="password"
+				ng-model="user.username" /><input type="password" name="password"
 				value="" class="form-control input-lg" placeholder="Password"
-				ng-model="user.pass" /><input type="password"
+				ng-model="user.password" /><input type="password"
 				name="confirm_password" value="" class="form-control input-lg"
 				placeholder="Confirm Password" /> <label>Birth Date</label>
 			<div class="row">
@@ -168,15 +168,12 @@
 			</div>
 			<label>Gender : </label> <label class="radio-inline"> <input
 				type="radio" name="gender" value="M" id=male
-				ng-model="user.genderMale" /> Male
-			</label> <label class="radio-inline"> <input type="radio"
-				name="gender" value="F" id=female ng-model="user.genderFemale" />
-				Female
+				ng-model="user.gender" /> Male
 			</label> <br /> <span class="help-block">By clicking Create my
 				account, you agree to our Terms and that you have read our Data Use
 				Policy, including our Cookie Use.</span>
 			<button class="btn btn-lg btn-primary btn-block signup-btn"
-				type="submit" ng-click="update(user)" value="Save">Create
+				type="submit" ng-click="update(user); " value="Save">Create
 				my account</button>
 		</form>
 	</div>

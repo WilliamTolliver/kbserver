@@ -1,7 +1,8 @@
 <label>Search</label>
 <input type="text" value="Doe" />
+<p>{{ users }}</p>
 
 <h3>Search Results</h3>
 <div class="list-group">
-    <search-result person-object="person" formatted-address-function="formattedAddress(bperson)" ng-repeat="person in people"></search-result>
+    <search-result user-object="user" formatted-user-function="formattedUser" ng-repeat="user in users"></search-result>
 </div>

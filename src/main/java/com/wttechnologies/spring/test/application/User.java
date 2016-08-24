@@ -11,14 +11,24 @@ public class User {
 	private String email;
 	private String username;
 	private String password;
+	private String gender;
+	private String bdayDay, bdayMonth, bdayYear;
 
-	public User(String firstName, String lastName, String email, String username, String password) {
+	public User(String firstName, String lastName, String email, String username, String password,
+			String gender, String bdayDay, String bdayMonth, String bdayYear) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.gender = gender;
+		this.bdayDay = bdayDay;
+		this.bdayMonth = bdayMonth;
+		this.bdayYear = bdayYear;
 	}
+
+
 
 	public User() {
 
@@ -121,10 +131,21 @@ public class User {
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", username=" + username + ", password=" + password + "]";
+				+ ", username=" + username + ", password=" + password + ", gender=" + gender + "]";
 	}
 
+	
+	
 }

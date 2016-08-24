@@ -26,9 +26,9 @@ public class Application {
 	public CommandLineRunner demo(UserRepository repository) {
 		return (args) -> {
 			// save a couple of customers
-			repository.save(new User("Jack", "Bauer", "", "", ""));
-			repository.save(new User("Chloe", "O'Brian", "", "", ""));
-			repository.save(new User("Kim", "Bauer", "", "", ""));
+			repository.save(new User("Jack", "Bauer", "", "", "", "male", "", "", ""));
+			repository.save(new User("Chloe", "O'Brian", "", "", "", "female", "", "", ""));
+			repository.save(new User("Kim", "Bauer", "", "", "", "female", "", "", ""));
 
 		};
 	}
